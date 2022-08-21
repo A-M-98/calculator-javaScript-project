@@ -3,7 +3,7 @@
 //querySelector
 const allClearButton = document.querySelector('.all-clear');
 const clearButton = document.querySelector('.clear');
-const plusMinusButton = document.querySelector('.plus-minus');
+const percentageButton = document.querySelector('.percentage');
 const equalsButton = document.querySelector('.equals');
 const screenNumbers = document.querySelector('.screen-numbers');
 
