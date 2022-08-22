@@ -34,3 +34,24 @@
   color: white;
   margin: 5px 5px 5px 5px;
 }
+.calculator .buttons .button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+.calculator .buttons #equals {
+  background-color: rgba(255, 106, 0, 0.864);
+  color: white;
+  grid-column: span 2;
+}
+.calculator .buttons #equals:hover {
+  background-color: orange;
+  color: black;
+}
+.calculator .buttons #operation {
+  background-color: rgba(255, 106, 0, 0.864);
+}
+.calculator .buttons #operation:hover {
+  background-color: orange;
+  color: black;
+}
