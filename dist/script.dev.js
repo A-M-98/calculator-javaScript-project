@@ -33,3 +33,32 @@ var calculate = function calculate(operator) {
 
   return result;
 };
+
+buttons.forEach(function (button) {
+  button.addEventListener('click', function (event) {
+    switch (event.target.innerText) {
+      case 'AC':
+        output.innerText = '';
+        break;
+
+      case 'C':
+        if (output.innerText) {
+          output.innerText = output.innerText.slice(0, -1);
+        }
+
+        break;
+
+      case '%':
+        output.innerText = output.innerText / 100;
+        break;
+
+      case '=':
+        var finalResult = calculate(output.innerText[1]);
+        output.innerText = finalResult;
+        break;
+
+      default:
+        output.innerText += event.target.innerText;
+    }
+  });
+});
