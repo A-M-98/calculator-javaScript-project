@@ -15,5 +15,15 @@ const calculate = (operator) => {
             result = Number(output.innerText[0]) + Number(output.innerText[2]);
             console.log("+");
             break;
+        case "-":
+            console.log("-");
+            break;
+        case "÷":
+            console.log("÷");
+            break;
+        case "×":
+            console.log("×");
+            break;
     }
+    return result;
 }
