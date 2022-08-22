@@ -16,3 +16,21 @@
   background-color: black;
   color: white;
 }
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #181818;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+.calculator .buttons .button {
+  border: 1px solid #999;
+  line-height: 100px;
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #505050;
+  color: white;
+  margin: 5px 5px 5px 5px;
+}
