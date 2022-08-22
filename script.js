@@ -16,12 +16,15 @@ const calculate = (operator) => {
             console.log("+");
             break;
         case "-":
+            result = Number(output.innerText[0]) - Number(output.innerText[2]);
             console.log("-");
             break;
         case "÷":
+            result = Number(output.innerText[0]) ÷ Number(output.innerText[2]);
             console.log("÷");
             break;
         case "×":
+            result = Number(output.innerText[0]) × Number(output.innerText[2]);
             console.log("×");
             break;
     }
