@@ -24,44 +24,44 @@ body {
         height: 100vh;
         grid-template-columns: repeat(4, 100px);
         grid-template-rows: minmax(120px, auto) repeat(5, 100px);
-    }
 
-    button {
-        color: white;
-        background-color: $color-primary;
-        border: 1px solid white;
-        border-radius: 50%;
-        font-size: 50px;
-        cursor: pointer;
-        transition-duration: 0.2s;
-    }
+        button {
+            color: white;
+            background-color: $color-primary;
+            border: 1px solid white;
+            border-radius: 50%;
+            font-size: 50px;
+            cursor: pointer;
+            transition-duration: 0.2s;
+        }
 
-    button:hover {
-        background-color: $secondary-color;
+        button:hover {
+            background-color: $secondary-color;
+    
+        }
 
-    }
+        .function-btn {
+            background-color: $function-btn-color;
+        }
 
-    .function-btn {
-        background-color: $function-btn-color;
-    }
+        .output {
+            grid-column: -1 / 1;
+            color: white;
+            background-color: $output-color;
+            border-radius: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            word-wrap: break-word;
+            word-wrap: break-all;
+            font-size: 40px;
+        }
 
-    .output {
-        grid-column: -1 / 1;
-        color: white;
-        background-color: $output-color;
-        border-radius: 20px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        word-wrap: break-word;
-        word-wrap: break-all;
-        font-size: 40px;
-    }
-
-    .equals {
-        grid-column: span 2;
-        height: auto;
+        .equals {
+            grid-column: span 2;
+            height: auto;
+        }
     }
 }
 
