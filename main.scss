@@ -1,65 +1,106 @@
-.calculator {
-    max-width: 435px;
-    height: auto;
-    margin: 10vh auto 0 auto;
-    box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 1);
-    border: 10px solid black;
-    border-radius: 20px;
-    justify-content: center;
-    
-    #output {
-        text-align: right;
-        height: 80px;
-        line-height: 80px;
-        padding: 20px 10px;
-        font-size: 30px;
-        background-color: black;
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+
+    .header{
+        height: 40px;
+        padding: 10px;
+        background-color: rgb(0, 0, 0);
         color: white;
-    }
+        font-family: sans-serif;
+        font-size: 40px;
+        text-align: center;
 
-    .buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        background-color: rgb(24, 24, 24);
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
+        .functions{
 
-        .button {
-            border: 1px solid #999;
-            line-height: 100px;
-            text-align: center;
-            font-size: 50px;
-            cursor: pointer;
-            border-radius: 50%;
-            background-color: rgb(80, 80, 80);
-            color: white;
-            margin: 5px 5px 5px 5px; 
+            color: rgba(255, 106, 0, 0.864);
         }
-
-        .button:hover {
+    }
+    .calculator {
+        max-width: 400px;
+        height: auto;
+        margin: 10vh auto 0 auto;
+        box-shadow: 0px 0px 40px 20px rgba(153, 153, 153, 1);
+        border: 10px solid black;
+        border-radius: 20px;
+        justify-content: center;
+        
+        #output {
+            text-align: right;
+            height: 80px;
+            line-height: 80px;
+            padding: 20px 10px;
+            font-size: 30px;
             background-color: black;
             color: white;
-            transition: 0.4s ease-in-out;
         }
 
-        #equals {
-            background-color: rgba(255, 106, 0, 0.864);
-            color: white;
-            grid-column: span 2;
-        }
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background-color: rgb(50, 43, 43);
+            justify-content: center;
+            align-items: center;
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+            margin: 5px;
 
-        #equals:hover {
-            background-color: orange;
-            color: black;
-        }
+            .button {
+                border: 1px solid #999;
+                line-height: 80px;
+                height: 80px;
+                width: 80px;
+                text-align: center;
+                font-size: 40px;
+                cursor: pointer;
+                border-radius: 50%;
+                background-color: rgb(80, 80, 80);
+                color: white;
+                margin: 5px 5px 5px 5px; 
+            }
 
-        #operation {
-            background-color: rgba(255, 106, 0, 0.864);
-        }
+            .button:hover {
+                background-color: black;
+                color: white;
+                transition: 0.4s ease-in-out;
+            }
 
-        #operation:hover {
-            background-color: orange;
-            color: black;
+            #equals {
+                background-color: rgba(255, 106, 0, 0.864);
+                color: white;
+                grid-column: span 2;
+                width: 170px;
+                border-radius: 50px;
+            }
+
+            #equals:hover {
+                background-color: orange;
+                color: black;
+            }
+
+            #operation {
+                background-color: rgba(255, 106, 0, 0.864);
+                align-items: center;
+                justify-content: center;
+            }
+
+            #operation:hover {
+                background-color: orange;
+                color: black;
+            }
+        }
+    } 
+}
+
+
+@media only screen and (max-width: 700px) {
+    .calculator {
+        max-width: fit-content;
+
+        .buttons{
+            max-width: fit-content;
         }
     }
-}
+
+  }

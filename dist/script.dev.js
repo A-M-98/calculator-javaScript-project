@@ -9,28 +9,96 @@ var percentageButton = document.getElementById('#percentage');
 var operations = document.querySelectorAll('#operation');
 var numbers = document.querySelectorAll('#number');
 
-var calculate = function calculate(operator) {
+var calculate = function calculate() {
+  //MAKE TWO ARRAYS FOR THE NUMBERS AND OPERATORS
+  //USE THOSE TWO ARRAYS TO CARRY OUT MULTIPLE EQUATIONS AT ONCE.
+  var currentDigits = [];
+  var operators = ["+", "-", "/", "*"];
+  var currentOperators = []; // operators.forEach((operator) => {
+  //    if(output.innerText.indexOf(operator) > 0) {
+  //     currentOperator = operator;
+  //    };
+  // })
+  // const operatorIndex = output.innerText.indexOf(currentOperator);
+
+  var equation = output.innerText;
+
+  for (var index = 0; index < output.innerText.length; index++) {
+    var character = equation[index];
+
+    if (character === operators[0] || character === operators[1] || character === operators[2] || character === operators[3]) {
+      currentOperators.push(character);
+      var newEquation = equation.replace(character, " ");
+      equation = newEquation;
+    }
+  }
+
+  currentDigits = equation.split(" ");
+  var firstNum = currentDigits[0];
+  var secondNum = currentDigits[1];
+  var thirdNum = currentDigits[2];
+  var firstOperator = currentOperators[0];
+  var secondOperator = currentOperators[1]; // if(firstOperator == "+"){
+  //     firstResult = (Number(firstNum) + Number(secondNum))
+  // } else if ()
+
+  console.log(firstOperator);
+  console.log(secondOperator);
+  console.log(firstNum);
+  console.log(secondNum);
+  console.log(thirdNum); //LOOP THROUGH AND GET THE FIRST ITEM FROM THE CURRENTDIGITS ARRAY AND 
+
+  console.log(currentDigits);
+  console.log(currentOperators); // currentDigits = 
+  // console.log(currentOperator);
+  // const firstNum = output.innerText.slice(0, (operatorIndex));
+  // const secondNum = output.innerText.slice(operatorIndex + 1);
+  // console.log(firstNum);
+  // console.log(secondNum);
+
   var result;
 
-  switch (operator) {
+  switch (firstOperator) {
     case "+":
-      result = Number(output.innerText[0]) + Number(output.innerText[2]);
+      result = Number(firstNum) + Number(secondNum);
       console.log("+");
       break;
 
     case "-":
-      result = Number(output.innerText[0]) - Number(output.innerText[2]);
+      result = Number(firstNum) - Number(secondNum);
       console.log("-");
       break;
 
-    case "÷":
-      result = Number(output.innerText[0]) / Number(output.innerText[2]);
-      console.log("÷");
+    case "/":
+      result = Number(firstNum) / Number(secondNum);
+      console.log("/");
       break;
 
-    case "×":
-      result = Number(output.innerText[0]) * Number(output.innerText[2]);
-      console.log("×");
+    case "*":
+      result = Number(firstNum) * Number(secondNum);
+      console.log("*");
+      break;
+  }
+
+  switch (secondOperator) {
+    case "+":
+      result = result + Number(thirdNum);
+      console.log("+");
+      break;
+
+    case "-":
+      result = result - Number(thirdNum);
+      console.log("-");
+      break;
+
+    case "/":
+      result = result / Number(thirdNum);
+      console.log("/");
+      break;
+
+    case "*":
+      result = result * Number(thirdNum);
+      console.log("*");
       break;
   }
 
@@ -56,7 +124,7 @@ buttons.forEach(function (button) {
         break;
 
       case '=':
-        var finalResult = calculate(output.innerText[1]);
+        var finalResult = calculate();
         output.innerText = finalResult;
         break;
 

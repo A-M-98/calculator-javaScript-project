@@ -1,0 +1,23 @@
+{
+  "name": "javascript-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-M-98/javaScript-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-M-98/javaScript-project/issues"
+  },
+  "homepage": "https://github.com/A-M-98/javaScript-project#readme",
+  "dependencies": {
+    "cypress": "^10.7.0"
+  }
+}
