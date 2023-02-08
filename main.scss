@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(0, 0, 0);
+    background: url(./images/background.jpeg);
 
     .header{
         height: 40px;
@@ -21,7 +21,7 @@ body{
         max-width: 400px;
         height: auto;
         margin: 10vh auto 0 auto;
-        box-shadow: 0px 0px 40px 20px rgba(153, 153, 153, 1);
+        box-shadow: 0px 0px 40px 20px rgb(249, 105, 44);
         border: 10px solid black;
         border-radius: 20px;
         justify-content: center;
